@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "870621935668",
+    "project_id": "faketinder-732ca",
+    "storage_bucket": "faketinder-732ca.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:870621935668:android:3997f6ba8c5785a3bdf261",
+        "android_client_info": {
+          "package_name": "com.example.faketinder"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "870621935668-o49uts1233hi03ndfu65o8jbf12jsa8v.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBK6qaEUbKbR4WWOB9lqPTBxNtjeS8e4-8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "870621935668-o49uts1233hi03ndfu65o8jbf12jsa8v.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
