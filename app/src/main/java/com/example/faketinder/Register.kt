@@ -1,6 +1,6 @@
 package com.example.faketinder
 
-import android.os.Bundle
+import  android.os.Bundle
 import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -26,11 +26,11 @@ class Register : Fragment() {
         val view = inflater.inflate(R.layout.fragment_register, container, false)
 
         val registerButton = view.findViewById<Button>(R.id.login_button);
-        val creatingAccountFragment = CreatingAccount();
         val progressBar = view.findViewById<ProgressBar>(R.id.progressBar);
 
         firebaseAuth = FirebaseAuth.getInstance()
         val bundle = Bundle()
+        val creatingAccountFragment = CreatingAccount()
 
         var userId:String
 
@@ -39,7 +39,6 @@ class Register : Fragment() {
             progressBar.visibility = View.VISIBLE
             val email = view.findViewById<EditText>(R.id.inputEmail_register).text.toString()
             val password = view.findViewById<EditText>(R.id.inputPassword_register).text.toString()
-
 
             try {
                 firebaseAuth.createUserWithEmailAndPassword(email,password)

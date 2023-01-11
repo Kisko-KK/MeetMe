@@ -1,12 +1,15 @@
 package com.example.faketinder
 
-data class User(
-    val id: String?=null,
-    var name: String,
-    var age: Int,
-    val gender: String,
-    var description: String,
-    var interestedIn: String,
+import android.util.Log
+import com.google.firebase.firestore.ktx.firestore
+import com.google.firebase.ktx.Firebase
 
+data class User(
+    var id: String="",
+    var name: String = "",
+    var age: Int = 0,
+    val gender: String = "",
+    var description: String = "",
+    var interestedIn: String = ""
 )
 

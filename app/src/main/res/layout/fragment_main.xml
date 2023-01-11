@@ -2,14 +2,69 @@
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/frame"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/gradient_background"
     tools:context=".MainFragment">
 
     <!-- TODO: Update blank fragment layout -->
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"/>
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/dislikeButton"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginBottom="40dp"
+            android:src="@drawable/dont_like"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/likeButton"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/swipeFrame" />
+
+        <ImageView
+            android:id="@+id/likeButton"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginBottom="30dp"
+            android:src="@drawable/like"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/dislikeButton"
+            app:layout_constraintTop_toBottomOf="@+id/swipeFrame" />
+
+        <FrameLayout
+            android:id="@+id/swipeFrame"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="20dp"
+            app:layout_constraintBottom_toTopOf="@+id/dislikeButton"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/image_main"
+                    android:layout_width="410dp"
+                    android:layout_height="534dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:src="@tools:sample/avatars" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </FrameLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 </FrameLayout>
