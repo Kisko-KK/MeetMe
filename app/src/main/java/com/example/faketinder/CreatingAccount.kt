@@ -32,6 +32,7 @@ class CreatingAccount : Fragment() {
     ): View? {
         val view =  inflater.inflate(R.layout.fragment_creating_account, container, false)
 
+
         val nameEditText = view.findViewById<EditText>(R.id.inputFirstName)
         val ageBar = view.findViewById<SeekBar>(R.id.ageBar)
         val genderRadioGroup = view.findViewById<RadioGroup>(R.id.genderRadioGroup)
@@ -63,12 +64,8 @@ class CreatingAccount : Fragment() {
                 userImage?.setImageBitmap(bitmap)
                 userImage?.visibility = View.VISIBLE
                 setFilePath(filePath)
-            } else {
-                // An error occurred.
-                val exception = result.error
             }
         }
-
 
         choosePictureButton.setOnClickListener {
             chooseImageAndCrop(cropImage)
@@ -138,10 +135,10 @@ class CreatingAccount : Fragment() {
             CropImageContractOptions(
                 uri = null,
                 cropImageOptions = CropImageOptions(
-                    imageSourceIncludeCamera = false,
+                    imageSourceIncludeCamera = true,
                     imageSourceIncludeGallery = true,
-                    aspectRatioX = 336,
-                    aspectRatioY = 532,
+                    aspectRatioX = 388,
+                    aspectRatioY = 541,
                     fixAspectRatio = true,
                     ),
             ),
