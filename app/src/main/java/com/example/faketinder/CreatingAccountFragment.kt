@@ -19,7 +19,7 @@ import com.google.firebase.ktx.Firebase
 import com.google.firebase.storage.FirebaseStorage
 import com.google.firebase.storage.StorageReference
 
-class CreatingAccount : Fragment() {
+class CreatingAccountFragment : Fragment() {
 
     private val db = Firebase.firestore
     private var userImage : ImageView ?= null
@@ -42,6 +42,7 @@ class CreatingAccount : Fragment() {
         val ageTextView = view.findViewById<TextView>(R.id.ageTextView)
         userImage = view.findViewById(R.id.userImage)
         val choosePictureButton = view.findViewById<ImageButton>(R.id.chooseImageButton)
+
 
         val mainFragment = MainFragment()
         val bundle = Bundle()
@@ -137,8 +138,8 @@ class CreatingAccount : Fragment() {
                 cropImageOptions = CropImageOptions(
                     imageSourceIncludeCamera = true,
                     imageSourceIncludeGallery = true,
-                    aspectRatioX = 388,
-                    aspectRatioY = 541,
+                    aspectRatioX = 397,
+                    aspectRatioY = 578,
                     fixAspectRatio = true,
                     ),
             ),

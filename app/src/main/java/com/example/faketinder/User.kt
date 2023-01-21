@@ -10,6 +10,7 @@ data class User(
     var age: Int = 0,
     val gender: String = "",
     var description: String = "",
-    var interestedIn: String = ""
+    var interestedIn: String = "",
+    val likes : ArrayList<String> = ArrayList()
 )
 

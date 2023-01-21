@@ -1,7 +1,6 @@
 package com.example.faketinder
 
 import  android.os.Bundle
-import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
@@ -14,7 +13,7 @@ import androidx.fragment.app.FragmentTransaction
 import com.google.firebase.auth.FirebaseAuth
 
 
-class Register : Fragment() {
+class RegisterFragment : Fragment() {
 
     private lateinit var firebaseAuth: FirebaseAuth
     private lateinit var user: User
@@ -30,7 +29,7 @@ class Register : Fragment() {
 
         firebaseAuth = FirebaseAuth.getInstance()
         val bundle = Bundle()
-        val creatingAccountFragment = CreatingAccount()
+        val creatingAccountFragment = CreatingAccountFragment()
 
         var userId:String
 

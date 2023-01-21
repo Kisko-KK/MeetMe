@@ -11,7 +11,7 @@ import androidx.fragment.app.FragmentTransaction
 import com.google.firebase.auth.FirebaseAuth
 
 
-class Login : Fragment() {
+class LoginFragment : Fragment() {
 
     private lateinit var firebaseAuth: FirebaseAuth
 
@@ -28,8 +28,10 @@ class Login : Fragment() {
         val loginButton = view.findViewById<Button>(R.id.login_button)
         val progressBar = view.findViewById<ProgressBar>(R.id.progressBar_login)
 
-        val registerFragment = Register()
+        val registerFragment = RegisterFragment()
+        val exploreFragment = ExploreFragment()
         val mainFragment = MainFragment()
+
         firebaseAuth = FirebaseAuth.getInstance()
 
 
