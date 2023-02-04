@@ -29,7 +29,6 @@ class LoginFragment : Fragment() {
         val progressBar = view.findViewById<ProgressBar>(R.id.progressBar_login)
 
         val registerFragment = RegisterFragment()
-        val exploreFragment = ExploreFragment()
         val mainFragment = MainFragment()
 
         firebaseAuth = FirebaseAuth.getInstance()

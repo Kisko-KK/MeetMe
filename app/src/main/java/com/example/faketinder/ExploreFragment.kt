@@ -44,7 +44,6 @@ class ExploreFragment : Fragment() {
 
 
 
-
         //get current user
         if (userId != null) {
             db.collection("users")
@@ -105,10 +104,6 @@ class ExploreFragment : Fragment() {
                                         setCardData(potentialMatches[index], imageView, nameTextView, ageTextView)
                                     }
                                 }
-
-
-
-
 
                             }
                     }
