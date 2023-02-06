@@ -23,31 +23,37 @@ class MainFragment : Fragment() {
 
         val exploreFragment = ExploreFragment()
         val likedFragment = LikedFragment()
+        val matchedFragment = MatchedFragment()
 
         //get userId
         val userId : String? = arguments?.getString("id").toString()
 
-        //send userId to ExploreFragment
+
+
         val bundle = Bundle()
         bundle.putString("id",userId)
+
+        //send userId to ExploreFragment
         exploreFragment.arguments = bundle
 
         //send userId to LikedFragment
-        val bundle1 = Bundle()
-        bundle1.putString("id",userId)
-        likedFragment.arguments = bundle1
+        likedFragment.arguments = bundle
 
-
+        //send userId to MatchedFragment
+        matchedFragment.arguments = bundle
 
         //set up tabs
         val adapter = ViewPagerAdapter(childFragmentManager)
         adapter.addFragment(exploreFragment,"")
         adapter.addFragment(likedFragment,"")
+        adapter.addFragment(matchedFragment, "")
         viewPager.adapter = adapter
         tabLayout.setupWithViewPager(viewPager)
+        viewPager.offscreenPageLimit = adapter.count - 1;
 
         tabLayout.getTabAt(0)!!.setIcon(R.drawable.baseline_fire)
-        tabLayout.getTabAt(1)!!.setIcon(R.drawable.baseline_star_24)
+        tabLayout.getTabAt(1)!!.setIcon(R.drawable.baseline_favorite_24)
+        tabLayout.getTabAt(2)!!.setIcon(R.drawable.baseline_star_24)
 
 
 

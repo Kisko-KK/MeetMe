@@ -8,6 +8,9 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
+import com.bumptech.glide.load.resource.bitmap.CenterInside
+import com.bumptech.glide.load.resource.bitmap.RoundedCorners
+import com.bumptech.glide.request.RequestOptions
 import com.google.firebase.storage.FirebaseStorage
 
 class UserRecycleAdapter(
@@ -51,6 +54,7 @@ class UserRecycleAdapter(
 
             Glide.with(view.context)
                 .load(storageRef)
+                .transform(CenterInside(),RoundedCorners(20))
                 .into(userImage)
 
 

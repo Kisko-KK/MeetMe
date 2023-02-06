@@ -40,7 +40,7 @@ class LikedFragment : Fragment() {
         val docRef = db.collection("users").document(userId.toString())
         docRef.addSnapshotListener { snapshot, _ ->
             if (snapshot != null && snapshot.exists()) {
-
+                snapshot
                 val user = snapshot.toObject(User::class.java)
                 if (user != null) {
                     likedUsersId = user.likes
